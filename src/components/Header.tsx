@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router'
+import { useLikes } from '../context/LikesContext'
 
 interface HeaderProps {
   title?: string
@@ -6,6 +7,8 @@ interface HeaderProps {
 }
 
 export function Header({ title = 'Student Portfolio', subtitle = 'IwAMaD Course - Week 04 Practice' }: HeaderProps) {
+  const { likes } = useLikes()
+
   return (
     <header className="p-4 bg-slate-800 text-white flex justify-between items-center">
       <div>
@@ -37,6 +40,9 @@ export function Header({ title = 'Student Portfolio', subtitle = 'IwAMaD Course 
         >
           Contact
         </NavLink>
+        <span className="ml-2 bg-slate-700 px-2 py-1 rounded text-sm text-pink-400 font-semibold">
+          ♥ {likes}
+        </span>
       </nav>
     </header>
   )
