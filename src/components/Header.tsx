@@ -20,6 +20,14 @@ export function Header({ title = 'Student Portfolio', subtitle = 'IwAMaD Course 
         </div>
       </div>
       <nav className="flex gap-4 items-center flex-wrap justify-center">
+                <NavLink
+          to="/register"
+          className={({ isActive }) =>
+            isActive ? 'active-nav-link font-bold underline' : 'hover:underline text-slate-200'
+          }
+        >
+          Register
+        </NavLink>
         <NavLink
           to="/"
           className={({ isActive }) =>
