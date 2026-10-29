@@ -28,6 +28,16 @@ export function Header({ title = 'Student Portfolio', subtitle = 'IwAMaD Course 
         >
           Register
         </NavLink>
+        
+        <NavLink
+        to="/events"
+        className={({ isActive }) =>
+          isActive ? 'active-nav-link font-bold underline' : 'hover:underline text-slate-200'
+          }
+          >
+            Events
+        </NavLink>
+        
         <NavLink
           to="/"
           className={({ isActive }) =>

@@ -1,9 +1,10 @@
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
+/// <reference types="vitest" />
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/iwamad-practice/',
+  base: '/iwamad-sis2-blog/',
   build: {
     outDir: 'docs',
   },
@@ -12,4 +13,4 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/setupTests.ts',
   },
-})
+});
